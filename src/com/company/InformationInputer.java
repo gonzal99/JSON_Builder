@@ -14,16 +14,23 @@ public class InformationInputer {
     }
     private String reqName(){
         int flag = 0;
+        int exit = 1;
         String name;
         while(flag == 0) {
             System.out.println("Please enter the name of the project: ");
             name = scanner.next();
             System.out.println("Is " + name + " correct?");
             String response = scanner.next().toUpperCase();
-            switch (response) {
-                case "y":
-                    return name
+            while (exit == 1) {
+                switch (response) {
+                    case "y":
+                        return name;
+                    case "n":
+                        System.out.println("Try again.");
+                        exit = 0;
+                    default:
 
+                }
             }
         }
     }
