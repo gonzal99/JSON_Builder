@@ -10,17 +10,42 @@ public class Project {
     private String projectDescription;
     private String projectStartDate;
     private String projectBuildNumber;
-    private ArrayList<Contributor> contributors;
-    public Project(String projectName,String projectDescription, String projectStartDate, String projectBuildNumberr){
+    public Project(){
+        projectName = "";
+        projectDescription = "";
+        projectStartDate = "";
+        projectBuildNumber = "";
+    }
+
+    public String getProjectName() {
+        return projectName;
+    }
+
+    public void setProjectName(String projectName) {
         this.projectName = projectName;
-        this.projectDescription = projectDescription;
+    }
+
+    public String getProjectBuildNumber() {
+        return projectBuildNumber;
+    }
+
+    public void setProjectBuildNumber(String projectBuildNumber) {
+        this.projectBuildNumber = projectBuildNumber;
+    }
+
+    public String getProjectStartDate() {
+        return projectStartDate;
+    }
+
+    public void setProjectStartDate(String projectStartDate) {
         this.projectStartDate = projectStartDate;
-        this.projectBuildNumber = projectBuildNumberr;
-        contributors = new ArrayList<Contributor>();
-    }
-    public void addContributor(Contributor contributor){
-        contributors.add(contributor);
     }
 
+    public String getProjectDescription() {
+        return projectDescription;
+    }
 
+    public void setProjectDescription(String projectDescription) {
+        this.projectDescription = projectDescription;
+    }
 }
